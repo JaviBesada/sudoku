@@ -30,19 +30,19 @@ incorrecto6 = [[1, 0, 0, 0],
                [0, 1, 0],
                [0, 0, 0, 1]]
 
-def asegurar_que_es_cuadrada(matriz):
+def es_cuadrada(matriz):
     pass                                               # se rellena en el paso 2
 
 
-def asegurar_que_todos_son_enteros(matriz):
+def son_enteros(matriz):
     pass                                               # se rellena en el paso 3
 
 
-def fila_es_correcta(matriz, numero_fila):
+def fila_correcta(matriz, numero_fila):
     pass                                               # se rellena en el paso 4
 
 
-def columna_es_correcta(matriz, numero_columna):
+def columna_correcta(matriz, numero_columna):
     pass                                               # se rellena en el paso 5
 
 

@@ -53,10 +53,13 @@ def fila_correcta(sudoku):
 
 
 def columna_correcta(sudoku):
-    for columna in sudoku:
+    for i in range(len(sudoku)):
+        numeros_vistos = []
         for fila in sudoku:
-            if len(columna) != len(sudoku):
+            numero = fila[i]
+            if numero in numeros_vistos:
                 return False
+            numeros_vistos.append(numero)
     return True
 
 def check_sudoku(sudoku):
@@ -105,8 +108,8 @@ if __name__ == "__main__":
 
     # casos test columna_correcta
     print("-------------------")
-    print(columna_correcta(incorrecto1))   # >>> True
     print(columna_correcta(correcto))      # >>> True
+    print(columna_correcta(incorrecto1))   # >>> True
     print(columna_correcta(incorrecto2))   # >>> True
     print(columna_correcta(incorrecto3))   # >>> True
     print(columna_correcta(incorrecto4))   # >>> False

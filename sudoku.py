@@ -31,30 +31,34 @@ incorrecto6 = [[1, 0, 0, 0],
                [0, 0, 0, 1]]
 
 def es_cuadrada(sudoku):
-    numero_filas = len(sudoku)                         # cuántas filas tiene la matriz (n)
-    for fila in range(numero_filas):                   # recorremos las filas por su posición
-        if len(sudoku[fila]) != numero_filas:          # si esa fila no mide n...
-            return False                               # ...la matriz no es cuadrada
-    return True                                        # todas las filas miden n: es cuadrada
+
+    assert isinstance(sudoku, list), "sudoku debe ser una lista"
+
+    numero_filas = len(sudoku)       
+                      
+    for fila in range(numero_filas):                  
+        if len(sudoku[fila]) != numero_filas:          
+            return False                               
+    return True                                        
 
 def son_enteros(sudoku):
     for fila in sudoku:
         for num_columna in fila:
             if type(num_columna) != int:
                 return False
-        return True                                              # se rellena en el paso 3
+        return True                                              
 
 
 def fila_correcta(sudoku):
-    pass                                               # se rellena en el paso 4
+    pass                                               
 
 
 def columna_correcta(sudoku):
-    pass                                               # se rellena en el paso 5
+    pass                                               
 
 
 def check_sudoku(sudoku):
-    pass                                               # se rellena en el paso 6
+    pass                                               
 
 if __name__ == "__main__":
     # casos test check sudoku

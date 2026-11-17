@@ -60,7 +60,7 @@ def columna_correcta(sudoku):
     return True
 
 def check_sudoku(sudoku):
-    pass                                               # se rellena en el paso 6
+    pass
 
 if __name__ == "__main__":
     # casos test check sudoku
@@ -92,3 +92,23 @@ if __name__ == "__main__":
     print(son_enteros(incorrecto4))   # >>> False
     print(son_enteros(incorrecto5))   # >>> False
     print(son_enteros(incorrecto6))   # >>> True
+
+    # casos test fila_correcta
+    print("-------------------")
+    print(fila_correcta(incorrecto1))   # >>> True
+    print(fila_correcta(correcto))      # >>> True
+    print(fila_correcta(incorrecto2))   # >>> True
+    print(fila_correcta(incorrecto3))   # >>> True
+    print(fila_correcta(incorrecto4))   # >>> False
+    print(fila_correcta(incorrecto5))   # >>> False
+    print(fila_correcta(incorrecto6))   # >>> True
+
+    # casos test columna_correcta
+    print("-------------------")
+    print(columna_correcta(incorrecto1))   # >>> True
+    print(columna_correcta(correcto))      # >>> True
+    print(columna_correcta(incorrecto2))   # >>> True
+    print(columna_correcta(incorrecto3))   # >>> True
+    print(columna_correcta(incorrecto4))   # >>> False
+    print(columna_correcta(incorrecto5))   # >>> False
+    print(columna_correcta(incorrecto6))   # >>> True

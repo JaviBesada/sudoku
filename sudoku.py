@@ -63,11 +63,14 @@ def columna_correcta(sudoku):
     return True
 
 def check_sudoku(sudoku):
-    pass
+   if es_cuadrada(sudoku) and son_enteros(sudoku) and fila_correcta(sudoku) and columna_correcta(sudoku):
+       return True
+   else:
+       return False
 
 if __name__ == "__main__":
     # casos test check sudoku
-
+    print("CHECK SUDOKU")
     print(check_sudoku(incorrecto1))   # >>> False
     print(check_sudoku(correcto))      # >>> True
     print(check_sudoku(incorrecto2))   # >>> False
@@ -75,9 +78,9 @@ if __name__ == "__main__":
     print(check_sudoku(incorrecto4))   # >>> False
     print(check_sudoku(incorrecto5))   # >>> False
     print(check_sudoku(incorrecto6))   # >>> False
-
+    print("-------------------")
     # casos test es_cuadrada
-
+    print("ES CUADRADA")
     print(es_cuadrada(incorrecto1))   # >>> True
     print(es_cuadrada(correcto))      # >>> True
     print(es_cuadrada(incorrecto2))   # >>> True
@@ -87,7 +90,9 @@ if __name__ == "__main__":
     print(es_cuadrada(incorrecto6))   # >>> False
 
     # casos test son_entero
+
     print("-------------------")
+    print("SON ENTEROS")
     print(son_enteros(incorrecto1))   # >>> True
     print(son_enteros(correcto))      # >>> True
     print(son_enteros(incorrecto2))   # >>> True
@@ -98,6 +103,7 @@ if __name__ == "__main__":
 
     # casos test fila_correcta
     print("-------------------")
+    print("FILA CORRECTA")
     print(fila_correcta(incorrecto1))   # >>> True
     print(fila_correcta(correcto))      # >>> True
     print(fila_correcta(incorrecto2))   # >>> True
@@ -108,6 +114,7 @@ if __name__ == "__main__":
 
     # casos test columna_correcta
     print("-------------------")
+    print("COLUMNA CORRECTA")
     print(columna_correcta(correcto))      # >>> True
     print(columna_correcta(incorrecto1))   # >>> True
     print(columna_correcta(incorrecto2))   # >>> True

@@ -38,7 +38,11 @@ def es_cuadrada(sudoku):
     return True                                        # todas las filas miden n: es cuadrada
 
 def son_enteros(sudoku):
-    pass                                          # se rellena en el paso 3
+    for fila in sudoku:
+        for num_columna in fila:
+            if type(num_columna) != int:
+                return False
+        return True                                              # se rellena en el paso 3
 
 
 def fila_correcta(sudoku):
@@ -73,4 +77,12 @@ if __name__ == "__main__":
     print(es_cuadrada(incorrecto5))   # >>> True
     print(es_cuadrada(incorrecto6))   # >>> False
 
-    
+    # casos test son_entero
+    print("-------------------")
+    print(son_enteros(incorrecto1))   # >>> True
+    print(son_enteros(correcto))      # >>> True
+    print(son_enteros(incorrecto2))   # >>> True
+    print(son_enteros(incorrecto3))   # >>> True
+    print(son_enteros(incorrecto4))   # >>> False
+    print(son_enteros(incorrecto5))   # >>> False
+    print(son_enteros(incorrecto6))   # >>> True

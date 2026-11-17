@@ -30,29 +30,47 @@ incorrecto6 = [[1, 0, 0, 0],
                [0, 1, 0],
                [0, 0, 0, 1]]
 
-def es_cuadrada(matriz):
-    pass                                               # se rellena en el paso 2
+def es_cuadrada(sudoku):
+    numero_filas = len(sudoku)                         # cuántas filas tiene la matriz (n)
+    for fila in range(numero_filas):                   # recorremos las filas por su posición
+        if len(sudoku[fila]) != numero_filas:          # si esa fila no mide n...
+            return False                               # ...la matriz no es cuadrada
+    return True                                        # todas las filas miden n: es cuadrada
+
+def son_enteros(sudoku):
+    pass                                          # se rellena en el paso 3
 
 
-def son_enteros(matriz):
-    pass                                               # se rellena en el paso 3
-
-
-def fila_correcta(matriz, numero_fila):
+def fila_correcta(sudoku):
     pass                                               # se rellena en el paso 4
 
 
-def columna_correcta(matriz, numero_columna):
+def columna_correcta(sudoku):
     pass                                               # se rellena en el paso 5
 
 
 def check_sudoku(sudoku):
     pass                                               # se rellena en el paso 6
 
-print(check_sudoku(incorrecto1))   # >>> False
-print(check_sudoku(correcto))      # >>> True
-print(check_sudoku(incorrecto2))   # >>> False
-print(check_sudoku(incorrecto3))   # >>> False
-print(check_sudoku(incorrecto4))   # >>> False
-print(check_sudoku(incorrecto5))   # >>> False
-print(check_sudoku(incorrecto6))   # >>> False
+if __name__ == "__main__":
+    # casos test check sudoku
+
+    print(check_sudoku(incorrecto1))   # >>> False
+    print(check_sudoku(correcto))      # >>> True
+    print(check_sudoku(incorrecto2))   # >>> False
+    print(check_sudoku(incorrecto3))   # >>> False
+    print(check_sudoku(incorrecto4))   # >>> False
+    print(check_sudoku(incorrecto5))   # >>> False
+    print(check_sudoku(incorrecto6))   # >>> False
+
+    # casos test es_cuadrada
+
+    print(es_cuadrada(incorrecto1))   # >>> True
+    print(es_cuadrada(correcto))      # >>> True
+    print(es_cuadrada(incorrecto2))   # >>> True
+    print(es_cuadrada(incorrecto3))   # >>> True
+    print(es_cuadrada(incorrecto4))   # >>> True
+    print(es_cuadrada(incorrecto5))   # >>> True
+    print(es_cuadrada(incorrecto6))   # >>> False
+
+    

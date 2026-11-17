@@ -46,7 +46,10 @@ def son_enteros(sudoku):
 
 
 def fila_correcta(sudoku):
-    pass                                               # se rellena en el paso 4
+    for fila in sudoku:
+        if len(fila) != len(set(fila)):
+            return False
+    return True                                          
 
 
 def columna_correcta(sudoku):

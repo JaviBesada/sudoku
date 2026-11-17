@@ -53,8 +53,11 @@ def fila_correcta(sudoku):
 
 
 def columna_correcta(sudoku):
-    pass                                               # se rellena en el paso 5
-
+    for columna in sudoku:
+        for fila in sudoku:
+            if len(columna) != len(sudoku):
+                return False
+    return True
 
 def check_sudoku(sudoku):
     pass                                               # se rellena en el paso 6

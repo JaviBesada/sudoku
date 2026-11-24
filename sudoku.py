@@ -1,14 +1,3 @@
-def es_cuadrada(sudoku):
-    assert isinstance(sudoku, list), "sudoku tiene que ser una lista"  # precondición
-    numero_filas = len(sudoku)  # cuántas filas tiene
-    for fila in range(numero_filas):  # recorremos cada fila por su posición
-        if (
-            len(sudoku[fila]) != numero_filas
-        ):  # si una fila no mide lo mismo que el nº de filas
-            return False  # no es cuadrada
-    return True  # todas las filas miden lo mismo que el nº de filas
-
-
 def son_enteros(sudoku):
     assert isinstance(sudoku, list), "sudoku tiene que ser una lista"  # precondición
     for fila in sudoku:  # cogemos cada fila
@@ -94,7 +83,6 @@ if __name__ == "__main__":
 
     incorrecto6 = [[1, 0, 0, 0], [0, 1, 0], [0, 0, 0, 1]]
 
-if __name__ == "__main__":
     # casos test check sudoku
     assert check_sudoku(incorrecto1) is False
     assert check_sudoku(correcto) is True
@@ -103,15 +91,6 @@ if __name__ == "__main__":
     assert check_sudoku(incorrecto4) is False
     assert check_sudoku(incorrecto5) is False
     assert check_sudoku(incorrecto6) is False
-
-    # casos test es_cuadrada
-    assert es_cuadrada(incorrecto1) is True
-    assert es_cuadrada(correcto) is True
-    assert es_cuadrada(incorrecto2) is True
-    assert es_cuadrada(incorrecto3) is True
-    assert es_cuadrada(incorrecto4) is True
-    assert es_cuadrada(incorrecto5) is True
-    assert es_cuadrada(incorrecto6) is False
 
     # casos test son_enteros
     assert son_enteros(incorrecto1) is True

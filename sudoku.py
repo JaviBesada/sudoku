@@ -1,14 +1,3 @@
-def son_enteros(sudoku):
-    assert isinstance(sudoku, list), "sudoku tiene que ser una lista"  # precondición
-    for fila in sudoku:  # cogemos cada fila
-        for num_columna in fila:  # cogemos cada elemento de la fila
-            if type(num_columna) != int:  # si alguno no es int
-                return False  # ya no vale
-    return (
-        True  # este return va FUERA de los dos for: solo se llega aquí si TODOS son int
-    )
-
-
 def fila_correcta(sudoku):
     assert isinstance(sudoku, list), "sudoku tiene que ser una lista"  # precondición
     for fila in sudoku:  # cogemos cada fila
